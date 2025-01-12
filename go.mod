@@ -1,4 +1,4 @@
-module github.com/uptime-induestries/compute-blade-agent
+module github.com/SFrace/compute-blade-agent
 
 go 1.22
 

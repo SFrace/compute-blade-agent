@@ -6,8 +6,8 @@ import (
 	"context"
 	"log"
 
-	"github.com/uptime-induestries/compute-blade-agent/pkg/hal"
-	"github.com/uptime-induestries/compute-blade-agent/pkg/hal/led"
+	"github.com/SFrace/compute-blade-agent/pkg/hal"
+	"github.com/SFrace/compute-blade-agent/pkg/hal/led"
 )
 
 func ExampleNewSmartFanUnit() {

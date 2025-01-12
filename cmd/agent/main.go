@@ -15,9 +15,9 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/spf13/viper"
-	bladeapiv1alpha1 "github.com/uptime-induestries/compute-blade-agent/api/bladeapi/v1alpha1"
-	"github.com/uptime-induestries/compute-blade-agent/internal/agent"
-	"github.com/uptime-induestries/compute-blade-agent/pkg/log"
+	bladeapiv1alpha1 "github.com/SFrace/compute-blade-agent/api/bladeapi/v1alpha1"
+	"github.com/SFrace/compute-blade-agent/internal/agent"
+	"github.com/SFrace/compute-blade-agent/pkg/log"
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
 )

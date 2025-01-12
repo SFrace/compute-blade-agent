@@ -3,7 +3,7 @@ package hal
 import (
 	"context"
 
-	"github.com/uptime-induestries/compute-blade-agent/pkg/hal/led"
+	"github.com/SFrace/compute-blade-agent/pkg/hal/led"
 )
 
 type FanUnitKind uint8

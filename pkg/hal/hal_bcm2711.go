@@ -14,8 +14,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/uptime-induestries/compute-blade-agent/pkg/hal/led"
-	"github.com/uptime-induestries/compute-blade-agent/pkg/log"
+	"github.com/SFrace/compute-blade-agent/pkg/hal/led"
+	"github.com/SFrace/compute-blade-agent/pkg/log"
 	"github.com/warthog618/gpiod"
 	"github.com/warthog618/gpiod/device/rpi"
 	"go.uber.org/zap"

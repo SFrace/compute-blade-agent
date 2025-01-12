@@ -9,10 +9,10 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/uptime-induestries/compute-blade-agent/pkg/hal"
-	"github.com/uptime-induestries/compute-blade-agent/pkg/hal/led"
-	"github.com/uptime-induestries/compute-blade-agent/pkg/ledengine"
-	"github.com/uptime-induestries/compute-blade-agent/pkg/util"
+	"github.com/SFrace/compute-blade-agent/pkg/hal"
+	"github.com/SFrace/compute-blade-agent/pkg/hal/led"
+	"github.com/SFrace/compute-blade-agent/pkg/ledengine"
+	"github.com/SFrace/compute-blade-agent/pkg/util"
 )
 
 func TestNewStaticPattern(t *testing.T) {

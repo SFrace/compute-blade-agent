@@ -5,9 +5,9 @@ import (
 	"errors"
 	"time"
 
-	"github.com/uptime-induestries/compute-blade-agent/pkg/hal"
-	"github.com/uptime-induestries/compute-blade-agent/pkg/hal/led"
-	"github.com/uptime-induestries/compute-blade-agent/pkg/util"
+	"github.com/SFrace/compute-blade-agent/pkg/hal"
+	"github.com/SFrace/compute-blade-agent/pkg/hal/led"
+	"github.com/SFrace/compute-blade-agent/pkg/util"
 )
 
 // LedEngine is the interface for controlling effects on the computeblade RGB LEDs

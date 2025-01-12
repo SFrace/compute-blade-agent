@@ -6,7 +6,7 @@ import (
 	"context"
 	"math"
 
-	"github.com/uptime-induestries/compute-blade-agent/pkg/hal/led"
+	"github.com/SFrace/compute-blade-agent/pkg/hal/led"
 	"github.com/warthog618/gpiod"
 	"github.com/warthog618/gpiod/device/rpi"
 )
