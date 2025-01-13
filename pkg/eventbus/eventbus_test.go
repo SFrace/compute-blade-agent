@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/uptime-induestries/compute-blade-agent/pkg/eventbus"
+	"github.com/SFrace/compute-blade-agent/pkg/eventbus"
 )
 
 func TestEventBusManySubscribers(t *testing.T) {
