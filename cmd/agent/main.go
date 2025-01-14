@@ -34,7 +34,7 @@ func main() {
 	viper.AutomaticEnv()
 	viper.SetConfigName("config")
 	viper.SetConfigType("yaml")
-	viper.AddConfigPath("/etc/computeblade-agent")
+	viper.AddConfigPath("/etc/compute-blade-agent")
 
 	// Load potential file configs
 	if err := viper.ReadInConfig(); err != nil {
