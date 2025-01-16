@@ -23,9 +23,9 @@ import (
 )
 
 const (
-	bcm2712PeripheryBaseAddr = 0xF0000000
+	bcm2712PeripheryBaseAddr = 0x1f00000000
 	bcm2712RegPwmAddr        = bcm2712PeripheryBaseAddr + 0x20C000
-	bcm2712GpioAddr          = bcm2712PeripheryBaseAddr + 0x200000
+	bcm2712GpioAddr          = bcm2712PeripheryBaseAddr + 0xd0000 / 4
 	bcm2712ClkAddr           = bcm2712PeripheryBaseAddr + 0x101000
 	bcm2712ClkManagerPwd     = (0x5A << 24) //(31 - 24) on CM_GP0CTL/CM_GP1CTL/CM_GP2CTL regs
 	bcm2712PageSize          = 4096         // theoretical page size
@@ -103,7 +103,7 @@ func NewCm5Hal(ctx context.Context, opts ComputeBladeHalOpts) (ComputeBladeHal, 
 		return nil, err
 	}
 
-	gpioChip0, err := gpiod.NewChip("gpiochip10")
+	gpioChip0, err := gpiod.NewChip("gpiochip0")
 	if err != nil {
 		return nil, err
 	}
