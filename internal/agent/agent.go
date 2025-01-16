@@ -117,7 +117,7 @@ func NewComputeBladeAgent(ctx context.Context, opts ComputeBladeAgentConfig) (Co
 	var err error
 
 	// blade, err := hal.NewCm4Hal(hal.ComputeBladeHalOpts{
-	blade, err := hal.NewCm4Hal(ctx, opts.ComputeBladeHalOpts)
+	blade, err := hal.NewCm5Hal(ctx, opts.ComputeBladeHalOpts)
 	if err != nil {
 		return nil, err
 	}
