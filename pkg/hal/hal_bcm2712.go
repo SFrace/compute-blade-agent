@@ -57,7 +57,7 @@ const (
 
 	bcm2712ThermalZonePath = "/sys/class/thermal/thermal_zone0/temp"
 
-	// smartFanUnitDev = "/dev/ttyAMA5" // UART5
+	smartFanUnitDev = "/dev/ttyAMA5" // UART5
 )
 
 type bcm2712 struct {
@@ -202,7 +202,7 @@ func (bcm *bcm2712) setup(ctx context.Context) error {
 		// FAN PWM output for standard fan unit (GPIO 12)
 		// -> bcm2712RegGpfsel1 8:6, alt0
 		bcm.gpioMem[bcm2712RegGpfsel1] = (bcm.gpioMem[bcm2712RegGpfsel1] &^ (0b111 << 6)) | (0b100 << 6)
-		bcm.fanUnit = &standardFanUnitbcm2711{
+		bcm.fanUnit = &standardFanUnitBcm2712{
 			GpioChip0:           bcm.gpioChip0,
 			DisableRPMreporting: !bcm.opts.RpmReportingStandardFanUnit,
 			SetFanSpeedPwmFunc: func(speed uint8) error {
@@ -386,7 +386,7 @@ func (bcm *bcm2712) SetStealthMode(enable bool) error {
 }
 
 // serializePwmDataFrame converts a byte to a 24 bit PWM data frame for WS281x LEDs
-/* func serializePwmDataFrame(data uint8) uint32 {
+func serializePwmDataFrame(data uint8) uint32 {
 	var result uint32 = 0
 	for i := 7; i >= 0; i-- {
 		if i != 7 {
@@ -399,7 +399,7 @@ func (bcm *bcm2712) SetStealthMode(enable bool) error {
 		}
 	}
 	return result
-} */
+}
 
 func (bcm *bcm2712) SetLed(idx uint, color led.Color) error {
 	if idx >= 2 {
