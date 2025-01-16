@@ -18,8 +18,8 @@ type SimulatedHal struct {
 	logger *zap.Logger
 }
 
-func NewCm4Hal(_ context.Context, _ ComputeBladeHalOpts) (ComputeBladeHal, error) {
-	logger := zap.L().Named("hal").Named("simulated-cm4")
+func NewCm5Hal(_ context.Context, _ ComputeBladeHalOpts) (ComputeBladeHal, error) {
+	logger := zap.L().Named("hal").Named("simulated-cm5")
 	logger.Warn("Using simulated hal")
 
 	computeModule.WithLabelValues("simulated").Set(1)
