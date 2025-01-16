@@ -202,7 +202,7 @@ func (bcm *bcm2712) setup(ctx context.Context) error {
 		// FAN PWM output for standard fan unit (GPIO 12)
 		// -> bcm2712RegGpfsel1 8:6, alt0
 		bcm.gpioMem[bcm2712RegGpfsel1] = (bcm.gpioMem[bcm2712RegGpfsel1] &^ (0b111 << 6)) | (0b100 << 6)
-		bcm.fanUnit = &standardFanUnitbcm2712{
+		bcm.fanUnit = &standardFanUnitbcm2711{
 			GpioChip0:           bcm.gpioChip0,
 			DisableRPMreporting: !bcm.opts.RpmReportingStandardFanUnit,
 			SetFanSpeedPwmFunc: func(speed uint8) error {
