@@ -103,7 +103,7 @@ func NewCm5Hal(ctx context.Context, opts ComputeBladeHalOpts) (ComputeBladeHal, 
 		return nil, err
 	}
 
-	gpioChip0, err := gpiod.NewChip("gpiochip4")
+	gpioChip0, err := gpiod.NewChip("gpiochip10")
 	if err != nil {
 		return nil, err
 	}
