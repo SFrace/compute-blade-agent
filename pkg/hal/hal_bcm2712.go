@@ -23,9 +23,9 @@ import (
 )
 
 const (
-	bcm2712PeripheryBaseAddr = 0x40000000
-	bcm2712RegPwmAddr        = bcm2712PeripheryBaseAddr + 0x9c000
-	bcm2712GpioAddr          = bcm2712PeripheryBaseAddr + 0xd0000
+	bcm2712PeripheryBaseAddr = 0x1f00000000
+	bcm2712RegPwmAddr        = bcm2712PeripheryBaseAddr + 0x9c000 / 4
+	bcm2712GpioAddr          = bcm2712PeripheryBaseAddr + 0xd0000 / 4
 	bcm2712ClkAddr           = bcm2712PeripheryBaseAddr + 0x101000
 	bcm2712ClkManagerPwd     = (0x5A << 24) //(31 - 24) on CM_GP0CTL/CM_GP1CTL/CM_GP2CTL regs
 	bcm2712PageSize          = 4096         // theoretical page size
@@ -36,9 +36,9 @@ const (
 
 	bcm2712RegGpfsel1 = 0x01
 
-	bcm2712RegPwmCtl  = 0x14
-	bcm2712RegPwmRng1 = 0x18
-	bcm2712RegPwmFif1 = 0x1c
+	bcm2712RegPwmCtl  = 0x00
+	bcm2712RegPwmRng1 = 0x04
+	bcm2712RegPwmFif1 = 0x06
 
 	bcm2712RegPwmCtlBitPwen2 = 8 // Enable (pwm2)
 	bcm2712RegPwmCtlBitClrf1 = 6 // Clear FIFO
